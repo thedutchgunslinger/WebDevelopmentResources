@@ -66,7 +66,7 @@
             <div class="h-100 p-5 bg-light border rounded-3 my-4">
               <h2>Lastig</h2>
               <p>
-                JavaScript libraries of api's
+                JavaScript libraries en api's
               </p>
             </div>
           </div>
@@ -220,52 +220,58 @@
             </a>
             <h2>Uitleg</h2>
             <p>
-              Om te beginnen moeten we een lege div aan maken in onze HTML
-              bestand.
+             In dit geval beginnen we bij de javascript, we gaan werken met data attributes in html, maar dit moeten we eerst aangeven in onze javascript.
+             om te beginnen gaan we netzoals bij de custom cursor een event listener laten luisteren naar de muis update zodat we de muis locatie kunnen ophalen. En iedere keer als de muis positie veranderd willen de functie parallax oproepen.
+
             </p>
             <pre class="bg-dark text-light"><code>
-              &lt;div id="cursor"&gt;&lt;/div&gt;
+              document.addEventListener("mousemove", parallax);
             </code></pre>
             <p>
-              Nu moeten we de cursor nog mooi maken. In dit geval heb ik gekozen
-              voor een simpel rondje. We gebruiken een CSS id om de cursor mooi te maken.
+              Nu gaan we de functie parallax schrijven. In de functie gaan we eerst alle elementen ophalen met de class, in dit geval .vierkant, en gaan we een stukje code bij ieder element runnen.
             </p>
             <pre class="bg-dark text-light"><code>
-              #cursor {
-                height: 20px;
-                width: 20px;
-                position: absolute;
-                border-radius: 50%;
-                border: 2px solid #000;
-                /*  doormiddel van de pointer-events op none te zetten zorgen we ervoor dat onze 
-                custom cursor niet berijkbaar is voor de muis, dus als je op een knopje zou willen drukken 
-                dat je ook op het knopje kan drukken en niet op de custom cursor.  */
-                pointer-events: none;
-              }
+             function parallax(e) {
+                // haal alle elementen op met de class functie
+                this.querySelectorAll(".vierkant").forEach(function (move) {
+                    // code die op ieder element word toegepast.
+              });
+            }
             </code></pre>
-            <p>Nu hebben we een rondje op ons scherm die nog niet beweegt. In ons javascript bestand kunnen we de cursor onze muis laten volgen. Om dit te berijken moeten we eerst de div van de cursor ophalen. Daarna moeten we een functie maken die de muis positie ophaalt en dan de cursor positie update.  </p>
+            <p>Het zou cool zijn als we in de html tag kunnen aangeven hoe heftig de beweging moet zijn zodat niet alles het zelfde beweegt.
+              Dit doen we met een data attribute, dit kunnen we in de html tag zetten en dan in de javascript ophalen.
+            </p>
            <pre class="bg-dark text-light"><code>
-              //haal het element van de cursor op
-              const cursor = document.querySelector("#cursor");
-              // maak een functie aan genaamd moveCursor, hierin komt de code om de cursor te bewegen.
-              const moveCursor = (e) => {
-                //haal de positie van de cursor op als de cursor beweegt
-                const mouseY = e.clientY;
-                const mouseX = e.clientX;
-                // update de positie van onze custom cursor met de huidige positie van de muis. 
-                Haal de width en heigth van de custom cursor, in dit geval is die 20 pixels breed en 20 pixels hoog, 
-                zodat die in het midden van de muis komt te staan.
-                cursor.style.transform = `translate3d(${mouseX - 20}px, ${mouseY - 20}px, 0)`;
-              };
-              // iedere keer als de muis beweegt willen we de cursor updaten
-              window.addEventListener("mousemove", moveCursor);
-              }
+              function parallax(e) {
+                // haal alle elementen op met de class functie
+                this.querySelectorAll(".vierkant").forEach(function (move) {
+                    //haal de data attribute op en sla die op in de variabele speed
+                    var speed = move.getAttribute("data-parallax");
+              });
+            }
             </code></pre>
-            <p>Nu volgt de cursor de muis. Als je een soort smooth volg effect wilt dan moet in de CSS van de cursor een transition delay erin zetten.</p>
+            <p>Om er voor te zorgen dat de beweging klein blijft en aangepast word door de data attribute moeten we een kleine bereking doen.
+              De bereking moeten we doen voor zowel de x as als de y as. Door het te delen door 250 zorgen we ervoor de beweging klein blijft.
+              Daarna passen we de x en y positie aan van het element.
+            </p>
             <pre class="bg-dark text-light"><code>
-               /*  door er een transition effect op te zetten volgt onze custom cursor de muis mooi smooth  */
-                transition-timing-function: ease-out;
-                transition-duration: 300ms;
+               function parallax(e) {
+                // haal alle elementen op met de class functie
+                this.querySelectorAll(".vierkant").forEach(function (move) {
+                    //haal de data attribute op en sla die op in de variabele speed
+                    var speed = move.getAttribute("data-parallax");
+                    var x = (e.clientX * speed) / 250;
+                    var y = (e.clientY * speed) / 250;
+                    //   update de style zodat het element beweegt
+                    move.style.transform = "translateX(" + x + "px) translateY(" + y + "px)";
+              });
+            }
+            </code></pre>
+            <p>
+              In de html kunnen we nu de data attribute gebruiken in combinatie met de class.
+            </p>
+            <pre class="bg-dark text-light"><code>
+              &lt;div class="vierkant" data-parallax="10"&gt;&lt;/div&gt;
             </code></pre>
           </div>
           <div class="modal-footer">
