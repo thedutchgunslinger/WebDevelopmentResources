@@ -11,7 +11,13 @@
       integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
       crossorigin="anonymous"
     />
-
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.8.1/font/bootstrap-icons.min.css"
+      integrity="sha512-Oy+sz5W86PK0ZIkawrG0iv7XwWhYecM3exvUtMKNJMekGFJtVAhibhRPTpmyTj8+lJCkmWfnpxKgT2OopquBHA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
     <title>Voorbeelden & Bronnen</title>
   </head>
   <body>
@@ -32,50 +38,266 @@
         <div class="row align-items-md-stretch">
           <div class="col-md-6">
             <div class="h-100 p-5 bg-light border rounded-3">
-              <h2>Makkelijk</h2>
-              <p>HTML & CSS</p>
+              <h2>HTML & CSS</h2>
+              <div class="accordion" id="accordion1">
+                <div class="accordion-item">
+                  <h2 class="accordion-header" id="headingOne">
+                    <button
+                      class="accordion-button bg-light"
+                      type="button"
+                      data-bs-toggle="collapse"
+                      data-bs-target="#collapseOne1"
+                      aria-expanded="true"
+                      aria-controls="collapseOne"
+                    >
+                      <i class="bi bi-star-fill"></i>
+                      <i class="bi bi-star"></i>
+                      <i class="bi bi-star"></i>
+                    </button>
+                  </h2>
+                  <div
+                    id="collapseOne1"
+                    class="accordion-collapse collapse show"
+                    aria-labelledby="headingOne"
+                    data-bs-parent="#accordion1"
+                  >
+                    <div class="accordion-body"></div>
+                  </div>
+                </div>
+                <div class="accordion-item">
+                  <h2 class="accordion-header" id="headingTwo">
+                    <button
+                      class="accordion-button collapsed bg-light"
+                      type="button"
+                      data-bs-toggle="collapse"
+                      data-bs-target="#collapseTwo1"
+                      aria-expanded="false"
+                      aria-controls="collapseTwo"
+                    >
+                      <i class="bi bi-star-fill"></i>
+                      <i class="bi bi-star-fill"></i>
+                      <i class="bi bi-star"></i>
+                    </button>
+                  </h2>
+                  <div
+                    id="collapseTwo1"
+                    class="accordion-collapse collapse"
+                    aria-labelledby="headingTwo"
+                    data-bs-parent="#accordion1"
+                  >
+                    <div class="accordion-body"></div>
+                  </div>
+                </div>
+                <div class="accordion-item">
+                  <h2 class="accordion-header" id="headingThree">
+                    <button
+                      class="accordion-button collapsed bg-light"
+                      type="button"
+                      data-bs-toggle="collapse"
+                      data-bs-target="#collapseThree1"
+                      aria-expanded="false"
+                      aria-controls="collapseThree"
+                    >
+                      <i class="bi bi-star-fill"></i>
+                      <i class="bi bi-star-fill"></i>
+                      <i class="bi bi-star-fill"></i>
+                    </button>
+                  </h2>
+                  <div
+                    id="collapseThree1"
+                    class="accordion-collapse collapse"
+                    aria-labelledby="headingThree"
+                    data-bs-parent="#accordion1"
+                  >
+                    <div class="accordion-body"></div>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
           <div class="col-md-6">
             <div class="h-100 p-5 bg-light border rounded-3">
-              <h2>Middelmatig</h2>
-              <p>HTML, CSS & JavaScript</p>
-              <ul>
-                <li>
-                  <a
-                    href="#"
-                    class="link-primary"
-                    data-bs-toggle="modal"
-                    data-bs-target="#customCursorModal"
-                    >Custom Cursor</a
+              <h2>HTML, CSS & JavaScript</h2>
+              <div class="accordion" id="accordion2">
+                <div class="accordion-item">
+                  <h2 class="accordion-header" id="headingOne">
+                    <button
+                      class="accordion-button bg-light"
+                      type="button"
+                      data-bs-toggle="collapse"
+                      data-bs-target="#collapseOne2"
+                      aria-expanded="true"
+                      aria-controls="collapseOne"
+                    >
+                      <i class="bi bi-star-fill"></i>
+                      <i class="bi bi-star"></i>
+                      <i class="bi bi-star"></i>
+                    </button>
+                  </h2>
+                  <div
+                    id="collapseOne2"
+                    class="accordion-collapse collapse show"
+                    aria-labelledby="headingOne"
+                    data-bs-parent="#accordion2"
                   >
-                </li>
-                <li>
-                  <a
-                    href="#"
-                    class="link-primary"
-                    data-bs-toggle="modal"
-                    data-bs-target="#muisParallaxModal"
-                    >Muis Parallax Effect</a
+                    <div class="accordion-body"></div>
+                  </div>
+                </div>
+                <div class="accordion-item">
+                  <h2 class="accordion-header" id="headingTwo">
+                    <button
+                      class="accordion-button collapsed bg-light"
+                      type="button"
+                      data-bs-toggle="collapse"
+                      data-bs-target="#collapseTwo2"
+                      aria-expanded="false"
+                      aria-controls="collapseTwo"
+                    >
+                      <i class="bi bi-star-fill"></i>
+                      <i class="bi bi-star-fill"></i>
+                      <i class="bi bi-star"></i>
+                    </button>
+                  </h2>
+                  <div
+                    id="collapseTwo2"
+                    class="accordion-collapse collapse"
+                    aria-labelledby="headingTwo"
+                    data-bs-parent="#accordion2"
                   >
-                </li>
-              </ul>
+                    <div class="accordion-body">
+                      <ul>
+                        <li>
+                          <a
+                            href="#"
+                            class="link-primary"
+                            data-bs-toggle="modal"
+                            data-bs-target="#customCursorModal"
+                            >Custom Cursor</a
+                          >
+                        </li>
+                        <li>
+                          <a
+                            href="#"
+                            class="link-primary"
+                            data-bs-toggle="modal"
+                            data-bs-target="#muisParallaxModal"
+                            >Muis Parallax Effect</a
+                          >
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+                <div class="accordion-item">
+                  <h2 class="accordion-header" id="headingThree">
+                    <button
+                      class="accordion-button collapsed bg-light"
+                      type="button"
+                      data-bs-toggle="collapse"
+                      data-bs-target="#collapseThree2"
+                      aria-expanded="false"
+                      aria-controls="collapseThree"
+                    >
+                      <i class="bi bi-star-fill"></i>
+                      <i class="bi bi-star-fill"></i>
+                      <i class="bi bi-star-fill"></i>
+                    </button>
+                  </h2>
+                  <div
+                    id="collapseThree2"
+                    class="accordion-collapse collapse"
+                    aria-labelledby="headingThree"
+                    data-bs-parent="#accordion2"
+                  >
+                    <div class="accordion-body"></div>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
           <div class="col-md-6">
             <div class="h-100 p-5 bg-light border rounded-3 my-4">
-              <h2>Lastig</h2>
-              <p>
-                JavaScript libraries en api's
-              </p>
+              <h2>JavaScript libraries en api's</h2>
+              <div class="accordion" id="accordion3">
+                <div class="accordion-item">
+                  <h2 class="accordion-header" id="headingOne">
+                    <button
+                      class="accordion-button bg-light"
+                      type="button"
+                      data-bs-toggle="collapse"
+                      data-bs-target="#collapseOne3"
+                      aria-expanded="true"
+                      aria-controls="collapseOne"
+                    >
+                      <i class="bi bi-star-fill"></i>
+                      <i class="bi bi-star"></i>
+                      <i class="bi bi-star"></i>
+                    </button>
+                  </h2>
+                  <div
+                    id="collapseOne3"
+                    class="accordion-collapse collapse show"
+                    aria-labelledby="headingOne"
+                    data-bs-parent="#accordion3"
+                  >
+                    <div class="accordion-body"></div>
+                  </div>
+                </div>
+                <div class="accordion-item">
+                  <h2 class="accordion-header" id="headingTwo">
+                    <button
+                      class="accordion-button collapsed bg-light"
+                      type="button"
+                      data-bs-toggle="collapse"
+                      data-bs-target="#collapseTwo3"
+                      aria-expanded="false"
+                      aria-controls="collapseTwo"
+                    >
+                      <i class="bi bi-star-fill"></i>
+                      <i class="bi bi-star-fill"></i>
+                      <i class="bi bi-star"></i>
+                    </button>
+                  </h2>
+                  <div
+                    id="collapseTwo3"
+                    class="accordion-collapse collapse"
+                    aria-labelledby="headingTwo"
+                    data-bs-parent="#accordion3"
+                  >
+                    <div class="accordion-body"></div>
+                  </div>
+                </div>
+                <div class="accordion-item">
+                  <h2 class="accordion-header" id="headingThree">
+                    <button
+                      class="accordion-button collapsed bg-light"
+                      type="button"
+                      data-bs-toggle="collapse"
+                      data-bs-target="#collapseThree3"
+                      aria-expanded="false"
+                      aria-controls="collapseThree"
+                    >
+                      <i class="bi bi-star-fill"></i>
+                      <i class="bi bi-star-fill"></i>
+                      <i class="bi bi-star-fill"></i>
+                    </button>
+                  </h2>
+                  <div
+                    id="collapseThree3"
+                    class="accordion-collapse collapse"
+                    aria-labelledby="headingThree"
+                    data-bs-parent="#accordion3"
+                  >
+                    <div class="accordion-body"></div>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
           <div class="col-md-6">
             <div class="h-100 p-5 bg-light border rounded-3 my-4">
               <h2>Bronnen</h2>
-              <p>
-               hier komt een bronnen lijst.
-              </p>
+              <p>hier komt een bronnen lijst.</p>
               <a class="btn btn-outline-secondary" href="survey.html">
                 Vertel je idee&#235;n!
               </a>
@@ -100,7 +322,9 @@
       <div class="modal-dialog modal-lg" role="document">
         <div class="modal-content">
           <div class="modal-header">
-            <h5 class="modal-title" id="customCursorModalLabel">Custom Cursor</h5>
+            <h5 class="modal-title" id="customCursorModalLabel">
+              Custom Cursor
+            </h5>
             <button
               type="button"
               class="btn-close"
@@ -132,7 +356,8 @@
             </code></pre>
             <p>
               Nu moeten we de cursor nog mooi maken. In dit geval heb ik gekozen
-              voor een simpel rondje. We gebruiken een CSS id om de cursor mooi te maken.
+              voor een simpel rondje. We gebruiken een CSS id om de cursor mooi
+              te maken.
             </p>
             <pre class="bg-dark text-light"><code>
               #cursor {
@@ -147,8 +372,14 @@
                 pointer-events: none;
               }
             </code></pre>
-            <p>Nu hebben we een rondje op ons scherm die nog niet beweegt. In ons javascript bestand kunnen we de cursor onze muis laten volgen. Om dit te berijken moeten we eerst de div van de cursor ophalen. Daarna moeten we een functie maken die de muis positie ophaalt en dan de cursor positie update.  </p>
-           <pre class="bg-dark text-light"><code>
+            <p>
+              Nu hebben we een rondje op ons scherm die nog niet beweegt. In ons
+              javascript bestand kunnen we de cursor onze muis laten volgen. Om
+              dit te berijken moeten we eerst de div van de cursor ophalen.
+              Daarna moeten we een functie maken die de muis positie ophaalt en
+              dan de cursor positie update.
+            </p>
+            <pre class="bg-dark text-light"><code>
               //haal het element van de cursor op
               const cursor = document.querySelector("#cursor");
               // maak een functie aan genaamd moveCursor, hierin komt de code om de cursor te bewegen.
@@ -165,7 +396,11 @@
               window.addEventListener("mousemove", moveCursor);
               }
             </code></pre>
-            <p>Nu volgt de cursor de muis. Als je een soort smooth volg effect wilt dan moet in de CSS van de cursor een transition delay erin zetten.</p>
+            <p>
+              Nu volgt de cursor de muis. Als je een soort smooth volg effect
+              wilt dan moet in de CSS van de cursor een transition delay erin
+              zetten.
+            </p>
             <pre class="bg-dark text-light"><code>
                /*  door er een transition effect op te zetten volgt onze custom cursor de muis mooi smooth  */
                 transition-timing-function: ease-out;
@@ -196,7 +431,9 @@
       <div class="modal-dialog modal-lg" role="document">
         <div class="modal-content">
           <div class="modal-header">
-            <h5 class="modal-title" id="muisParallaxModalLabel">Muis Parallax Effect</h5>
+            <h5 class="modal-title" id="muisParallaxModalLabel">
+              Muis Parallax Effect
+            </h5>
             <button
               type="button"
               class="btn-close"
@@ -220,15 +457,20 @@
             </a>
             <h2>Uitleg</h2>
             <p>
-             In dit geval beginnen we bij de javascript, we gaan werken met data attributes in html, maar dit moeten we eerst aangeven in onze javascript.
-             om te beginnen gaan we netzoals bij de custom cursor een event listener laten luisteren naar de muis update zodat we de muis locatie kunnen ophalen. En iedere keer als de muis positie veranderd willen de functie parallax oproepen.
-
+              In dit geval beginnen we bij de javascript, we gaan werken met
+              data attributes in html, maar dit moeten we eerst aangeven in onze
+              javascript. om te beginnen gaan we netzoals bij de custom cursor
+              een event listener laten luisteren naar de muis update zodat we de
+              muis locatie kunnen ophalen. En iedere keer als de muis positie
+              veranderd willen de functie parallax oproepen.
             </p>
             <pre class="bg-dark text-light"><code>
               document.addEventListener("mousemove", parallax);
             </code></pre>
             <p>
-              Nu gaan we de functie parallax schrijven. In de functie gaan we eerst alle elementen ophalen met de class, in dit geval .vierkant, en gaan we een stukje code bij ieder element runnen.
+              Nu gaan we de functie parallax schrijven. In de functie gaan we
+              eerst alle elementen ophalen met de class, in dit geval .vierkant,
+              en gaan we een stukje code bij ieder element runnen.
             </p>
             <pre class="bg-dark text-light"><code>
              function parallax(e) {
@@ -238,10 +480,13 @@
               });
             }
             </code></pre>
-            <p>Het zou cool zijn als we in de html tag kunnen aangeven hoe heftig de beweging moet zijn zodat niet alles het zelfde beweegt.
-              Dit doen we met een data attribute, dit kunnen we in de html tag zetten en dan in de javascript ophalen.
+            <p>
+              Het zou cool zijn als we in de html tag kunnen aangeven hoe heftig
+              de beweging moet zijn zodat niet alles het zelfde beweegt. Dit
+              doen we met een data attribute, dit kunnen we in de html tag
+              zetten en dan in de javascript ophalen.
             </p>
-           <pre class="bg-dark text-light"><code>
+            <pre class="bg-dark text-light"><code>
               function parallax(e) {
                 // haal alle elementen op met de class functie
                 this.querySelectorAll(".vierkant").forEach(function (move) {
@@ -250,8 +495,11 @@
               });
             }
             </code></pre>
-            <p>Om er voor te zorgen dat de beweging klein blijft en aangepast word door de data attribute moeten we een kleine bereking doen.
-              De bereking moeten we doen voor zowel de x as als de y as. Door het te delen door 250 zorgen we ervoor de beweging klein blijft.
+            <p>
+              Om er voor te zorgen dat de beweging klein blijft en aangepast
+              word door de data attribute moeten we een kleine bereking doen. De
+              bereking moeten we doen voor zowel de x as als de y as. Door het
+              te delen door 250 zorgen we ervoor de beweging klein blijft.
               Daarna passen we de x en y positie aan van het element.
             </p>
             <pre class="bg-dark text-light"><code>
@@ -268,7 +516,8 @@
             }
             </code></pre>
             <p>
-              In de html kunnen we nu de data attribute gebruiken in combinatie met de class.
+              In de html kunnen we nu de data attribute gebruiken in combinatie
+              met de class.
             </p>
             <pre class="bg-dark text-light"><code>
               &lt;div class="vierkant" data-parallax="10"&gt;&lt;/div&gt;
